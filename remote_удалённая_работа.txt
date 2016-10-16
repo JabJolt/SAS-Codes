@@ -1,0 +1,24 @@
+/* Настройки для rsubmit*/ 
+
+options comamid=tcp(или другой протокол); 
+        options metaserver="имя сервера" metaport=сасовский порт(8561) metarepository=Foundation_имя 
+            metauser="юзер" 
+            metapass="пароль"; 
+signon имя_сервера; 
+
+
+/* Выполнение кода*/ 
+
+rsubmit; 
+        LIBNAME SASWORK BASE "либ_путь"; 
+endrsubmit; 
+
+/* Как в SAS Environment смотреть библиотеку, которую до этого приэссайнили*/ 
+
+libname SASWORK server=имя_сервера; 
+
+rsubmit; 
+
+        libname DataFile BASE "либ_путь"; 
+
+endrsubmit; 
