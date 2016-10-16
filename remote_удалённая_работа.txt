@@ -1,24 +1,24 @@
-/* Настройки для rsubmit*/ 
+п»ї/* РќР°СЃС‚СЂРѕР№РєРё РґР»СЏ rsubmit*/ 
 
-options comamid=tcp(или другой протокол); 
-        options metaserver="имя сервера" metaport=сасовский порт(8561) metarepository=Foundation_имя 
-            metauser="юзер" 
-            metapass="пароль"; 
-signon имя_сервера; 
+options comamid=tcp(РёР»Рё РґСЂСѓРіРѕР№ РїСЂРѕС‚РѕРєРѕР»); 
+        options metaserver="РёРјСЏ СЃРµСЂРІРµСЂР°" metaport=СЃР°СЃРѕРІСЃРєРёР№ РїРѕСЂС‚(8561) metarepository=Foundation_РёРјСЏ 
+            metauser="СЋР·РµСЂ" 
+            metapass="РїР°СЂРѕР»СЊ"; 
+signon РёРјСЏ_СЃРµСЂРІРµСЂР°; 
 
 
-/* Выполнение кода*/ 
+/* Р’С‹РїРѕР»РЅРµРЅРёРµ РєРѕРґР°*/ 
 
 rsubmit; 
-        LIBNAME SASWORK BASE "либ_путь"; 
+        LIBNAME SASWORK BASE "Р»РёР±_РїСѓС‚СЊ"; 
 endrsubmit; 
 
-/* Как в SAS Environment смотреть библиотеку, которую до этого приэссайнили*/ 
+/* РљР°Рє РІ SAS Environment СЃРјРѕС‚СЂРµС‚СЊ Р±РёР±Р»РёРѕС‚РµРєСѓ, РєРѕС‚РѕСЂСѓСЋ РґРѕ СЌС‚РѕРіРѕ РїСЂРёСЌСЃСЃР°Р№РЅРёР»Рё*/ 
 
-libname SASWORK server=имя_сервера; 
+libname SASWORK server=РёРјСЏ_СЃРµСЂРІРµСЂР°; 
 
 rsubmit; 
 
-        libname DataFile BASE "либ_путь"; 
+        libname DataFile BASE "Р»РёР±_РїСѓС‚СЊ"; 
 
 endrsubmit; 
